@@ -8,6 +8,8 @@ fun main(args: Array<String>) {
     printHello()
 
     testArgumentFunction()
+
+    testLamdbaFunction(10)
 }
 
 fun printHello() {
@@ -32,6 +34,15 @@ fun printHello() {
     listOf.map { x -> println(x) }
 }
 
+/*
+ function with default parameter value
+ */
 fun testArgumentFunction(speed: String = "test") {
     println("test is value $speed");
 }
+
+fun testLamdbaFunction(divideValue: Int) {
+    var simpleDividedFunc = { dirty : Int -> dirty / 2 }
+    println(simpleDividedFunc(divideValue))
+}
+
