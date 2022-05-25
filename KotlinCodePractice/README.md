@@ -48,4 +48,9 @@
     }
     ```
     * lambdas
+    ```var lambdas = { inputValue: Int -> inputValue / 2}```
     * higher-order-functions: passing a lambda to another function
+      * you pass a lambdas, function or just a simple value as an input to a function
+      * lambdas
+      * regular function
+      * simple value
