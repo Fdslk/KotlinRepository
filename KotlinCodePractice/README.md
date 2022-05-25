@@ -50,7 +50,30 @@
     * lambdas
     ```var lambdas = { inputValue: Int -> inputValue / 2}```
     * higher-order-functions: passing a lambda to another function
-      * you pass a lambdas, function or just a simple value as an input to a function
-      * lambdas
-      * regular function
-      * simple value
+      * return value
+        ```kotlin
+        fun returnValue(x: Int, y: Int, operate: (Int, Int) -> Int): Int {
+          return operate(x, y)
+        }
+        ```
+        * you pass a lambdas, function or just a simple value as an input to a function
+        * lambdas
+        ```kotlin
+        var sum = {(x: Int, y: Int) -> x + y}
+        returnValue(1, 2, sum)
+        ```
+        * regular function
+        ```kotlin
+        fun sum(x: Int, y:Int): Int {
+          return x + y
+        }
+        
+        returnValue(1, 2, ::sum)
+        ```
+        * simple value
+      * return function
+        ```kotlin
+        fun operate(): (Int, Int) -> Int {
+            return sum //::sum '**sum**' is defined as a regular function, the former is a lambda expression
+        }
+        ```

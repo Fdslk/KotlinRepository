@@ -10,8 +10,16 @@ fun main(args: Array<String>) {
     testArgumentFunction()
 
     testLamdbaFunction(10)
-}
 
+    val testHighOrderFunction = processIntTypeValue(1, toString)
+    val testHighOrderFunction1 = processIntTypeValue(1) { str -> str.toString() }
+    println(testHighOrderFunction)
+    println(testHighOrderFunction1)
+    println(calculate(1, 2, ::sum))
+    println(processIntTypeValue(10, ::toStringRegular))
+    println(calculate(10, 10, sum1))
+    println(calculate(10, 10, sum2))
+}
 fun printHello() {
     var rocks: Int? = null
     var fishFoodTreats = 6
@@ -48,5 +56,37 @@ fun testLamdbaFunction(divideValue: Int) {
 
     println(simpleDividedFunc(divideValue))
     println(simpleDividedFunc2(divideValue))
+
+    var upperCase2: (String) -> String = {str -> str.uppercase()}
+    var upperCase3 = {str: String -> str.uppercase()}
+    var upperCase4: (String) -> String = String::uppercase
 }
 
+var toString: (Int) -> String = {str: Int -> (str + 1).toString()}
+
+fun toStringRegular(x: Int): String {
+    return x.toString()
+}
+
+fun processIntTypeValue(testValue: Int, operator: (Int) -> String): String {
+    return operator(testValue)
+}
+
+fun calculate(x: Int, y: Int, operator: (Int, Int) -> Int): Int{
+    return operator(x, y)
+}
+
+fun sum(x: Int, y: Int): Int {
+    return x + y
+}
+
+var sum1: (Int, Int) -> Int = {num1, num2 -> (num1 + num2)}
+var sum2 = {num1: Int, num2: Int -> (num1 + num2)}
+
+fun operate(): (Int, Int) -> Int {
+    return ::sum
+}
+
+fun operate2(): (Int, Int) -> Int {
+    return sum1
+}
