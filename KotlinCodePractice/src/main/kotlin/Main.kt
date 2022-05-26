@@ -1,5 +1,6 @@
 import example.myapp.AquariumVolume
 import example.myapp.buildAquarium
+import example.myapp.buildAquariumSub
 
 fun main(args: Array<String>) {
     println("Hello World!")
@@ -24,6 +25,8 @@ fun main(args: Array<String>) {
     println(calculate(10, 10, sum2))
 
     buildAquarium()
+
+    buildAquariumSub()
 }
 fun printHello() {
     var rocks: Int? = null

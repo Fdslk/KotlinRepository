@@ -99,3 +99,14 @@
             }   
         }
         ```
+      * subclass
+        * by default kotlin cannot be subclassed, otherwise adding operator ```open``` before your class, the same as the property and member
+      * inheritance
+        * if the setter is defined as following block, it will throw ```Exception in thread "main" java.lang.StackOverflowError```
+        ```kotlin
+        override var shape: String
+                     get() = towerTankShape
+                     set(value) {
+                        shape = value
+                    }
+        ```
