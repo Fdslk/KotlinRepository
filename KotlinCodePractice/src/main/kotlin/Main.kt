@@ -1,3 +1,6 @@
+import example.myapp.AquariumVolume
+import example.myapp.buildAquarium
+
 fun main(args: Array<String>) {
     println("Hello World!")
 
@@ -19,6 +22,8 @@ fun main(args: Array<String>) {
     println(processIntTypeValue(10, ::toStringRegular))
     println(calculate(10, 10, sum1))
     println(calculate(10, 10, sum2))
+
+    buildAquarium()
 }
 fun printHello() {
     var rocks: Int? = null

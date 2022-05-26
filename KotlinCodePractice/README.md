@@ -77,3 +77,25 @@
             return sum //::sum '**sum**' is defined as a regular function, the former is a lambda expression
         }
         ```
+    * OO related knowledge
+      * class
+        * no needs to create getter and setter, they are created automatically.
+        * no needs to create an individual constructor method, rather than defining a constructor with class directly
+        ```kotlin
+        class MyClass(arg1: String, arg2: String) {
+            var arg1Internal1: String = arg1
+            var arg1Internal2: String = arg2
+        }
+        ```
+        * providing init block in class constructor, you can write some logic in the init block
+        * providing secondary constructor in class
+        ```kotlin
+        class MyClass(arg1: String, arg2: String) {
+            var arg1Internal1: String = arg1
+            var arg1Internal2: String = arg2
+            
+            constructor(arg: Int): this() {
+                //your logic
+            }   
+        }
+        ```
