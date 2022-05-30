@@ -110,3 +110,15 @@
                         shape = value
                     }
         ```
+      * delegation
+        * declare an object as a singleton object which can set default color value and doesn't need
+        to override super property
+        ```kotlin
+        object GolderColor: FishColor {
+            override val color = "golder"
+        }
+        
+        class ImplementClass(fishColor: FishColor = GolderColor): Fishcolor by fishColor {
+            
+        }
+        ```

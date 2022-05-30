@@ -1,6 +1,4 @@
-import example.myapp.AquariumVolume
-import example.myapp.buildAquarium
-import example.myapp.buildAquariumSub
+import example.myapp.*
 
 fun main(args: Array<String>) {
     println("Hello World!")
@@ -27,6 +25,15 @@ fun main(args: Array<String>) {
     buildAquarium()
 
     buildAquariumSub()
+
+    val plecostomus = Plecostomus()
+    println(plecostomus.color)
+    plecostomus.eat()
+
+    val blackPlecostomus = Plecostomus(fishColor = BlackColor)
+    println(blackPlecostomus.color)
+    blackPlecostomus.eat()
+
 }
 fun printHello() {
     var rocks: Int? = null
