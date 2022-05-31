@@ -41,6 +41,15 @@ fun main(args: Array<String>) {
     }
     val walrus = Walrus()
     println(matchSeal(walrus))
+
+    println(Const.CONSTANT)
+
+    MyClass().printCompanionObjectConstant()
+
+    val extensions = Extensions("tony", 27, "male")
+    extensions.printPerson()
+    println(extensions.hasShortName())
+    println(extensions.hasOldAge())
 }
 fun printHello() {
     var rocks: Int? = null
@@ -113,9 +122,27 @@ fun operate2(): (Int, Int) -> Int {
     return sum1
 }
 
+//enum operator
 enum class Direction(val degrees: Int) {
     NORTH(0),
     SOUTH(180),
     EAST(90),
     WEST(270)
 }
+
+//const
+
+object Const {
+    const val CONSTANT = "object constant"
+}
+
+class MyClass {
+    companion object {
+        const val CONSTANT3 = "constant in companion"
+    }
+
+    fun printCompanionObjectConstant() {
+        println(CONSTANT3)
+    }
+}
+

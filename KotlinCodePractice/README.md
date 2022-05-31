@@ -77,6 +77,13 @@
             return sum //::sum '**sum**' is defined as a regular function, the former is a lambda expression
         }
         ```
+      * extensions, only can access to public api
+        ```kotlin
+        Class.extensionFunctionName(arg: type): returnValue {
+          return this.value
+        }
+
+        ```
     * OO related knowledge
       * class
         * no needs to create getter and setter, they are created automatically.
@@ -127,3 +134,24 @@
         * enum class: just add <a style="color:yellow">**enum**</a> key word
         * sealed class
           * need to be added in the same file with the subclass
+      * special data structure
+        * pairs connect with two values by **to** keyword
+          * pair can be constructed and deconstructed
+        ```kotlin
+        val pair = "part one" to "part two"
+        println("${pair.first} with ${pair.second}")
+        
+        // nested pair
+        ("out part one" to "out part two") to "inside part two"
+        ```
+        * triples is similar with java
+        * const: 
+          * **const** keyword only can be used in object singleton class
+          * using const in class
+          ````kotlin
+          class MyClass {
+             companion object {
+               const val CONSTANT3 = "constant in companion"
+             }
+          }
+          ````
