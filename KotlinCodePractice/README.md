@@ -122,3 +122,8 @@
             
         }
         ```
+      * special class
+        * singleton class: just declares <a style="color:yellow">**object**</a> operator key word 
+        * enum class: just add <a style="color:yellow">**enum**</a> key word
+        * sealed class
+          * need to be added in the same file with the subclass

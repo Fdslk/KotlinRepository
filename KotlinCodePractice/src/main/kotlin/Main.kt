@@ -34,6 +34,13 @@ fun main(args: Array<String>) {
     println(blackPlecostomus.color)
     blackPlecostomus.eat()
 
+    for (item in Direction.values()){
+        println(item.degrees)
+        println(item.name)
+        println(item.ordinal)
+    }
+    val walrus = Walrus()
+    println(matchSeal(walrus))
 }
 fun printHello() {
     var rocks: Int? = null
@@ -104,4 +111,11 @@ fun operate(): (Int, Int) -> Int {
 
 fun operate2(): (Int, Int) -> Int {
     return sum1
+}
+
+enum class Direction(val degrees: Int) {
+    NORTH(0),
+    SOUTH(180),
+    EAST(90),
+    WEST(270)
 }
