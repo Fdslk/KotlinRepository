@@ -168,3 +168,10 @@
         ```
         * methods
         * functions
+      * annotation
+        * add **annotation** key work before the class
+        ```kotlin
+        annotation class KotlinClass 
+        ```
+        * ```findAnnotation``` method to get target annotation
+          * then if this function scans related annotation, the later code block will add some logic
