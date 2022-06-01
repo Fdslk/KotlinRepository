@@ -155,3 +155,16 @@
              }
           }
           ````
+      * generic
+        * class: how to define a generic class
+        ```kotlin
+        class GenericClass<T> (val specificClass: T)
+        ```
+        * usage
+        ```kotlin
+        GenericClass<SpecificClass>(SpecificClass())
+        // the class name in angle bracket can be removed as follow
+        GenericClass(SpecificClass()) 
+        ```
+        * methods
+        * functions

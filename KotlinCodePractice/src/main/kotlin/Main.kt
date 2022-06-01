@@ -1,3 +1,4 @@
+import example.generics.genericExample
 import example.myapp.*
 
 fun main(args: Array<String>) {
@@ -50,6 +51,8 @@ fun main(args: Array<String>) {
     extensions.printPerson()
     println(extensions.hasShortName())
     println(extensions.hasOldAge())
+
+    genericExample()
 }
 fun printHello() {
     var rocks: Int? = null
