@@ -174,4 +174,23 @@
         annotation class KotlinClass 
         ```
         * ```findAnnotation``` method to get target annotation
+          * target annotation, add **@Target** before the annotation class
+          ```kotlin 
+          @Target(AnnotationTarget.PROPERTY_GETTER, AnnotationTarget.PROPERTY, AnnotationTarget.FUNCTION)
+          annotation class OnGet
+          ```
           * then if this function scans related annotation, the later code block will add some logic
+        * ```::class``` is used to reflect the class internal information.
+          * tips: you need to import ```implementation("org.jetbrains.kotlin:kotlin-reflect:1.6.21")```
+        * ```@``` keyword can be used as a labeled break, which can control the program flow
+        ```kotlin
+        fun test() {
+            outstop@ for (i in 1 .. 100){
+                print("$i")
+                for (j in 1 .. 100){
+                    if (i > 10)
+                       break @outstop
+                } 
+           }
+        }
+        ```

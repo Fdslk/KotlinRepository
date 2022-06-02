@@ -23,7 +23,7 @@ fun testAnnotations() {
     val classObj = Plant::class
     for (m in classObj.declaredMemberFunctions) {
         if(m.findAnnotation<OnGet>() != null && m.findAnnotation<OnGet>()!!.annotationClass == OnGet::class){
-            println("yeah")
+            println("Yeah, '${m.name}()' you are my target annotation.")
         }
 
         println(m.name)
@@ -36,8 +36,18 @@ fun testAnnotations() {
     println(classObj.findAnnotation<ImAPlant>())
 }
 
+fun labels() {
+    outRule@ for (i in 1..100) {
+        print("$i ")
+        for (j in 1..100) {
+            if (i > 10) break@outRule // breaks to outer loop
+        }
+    }
+}
+
 fun main() {
-    testAnnotations()
+//    testAnnotations()
+    labels()
 }
 
 annotation class ImAPlant
