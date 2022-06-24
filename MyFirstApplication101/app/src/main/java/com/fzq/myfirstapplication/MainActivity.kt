@@ -21,12 +21,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun addNickname(view: View) {
-        binding.nicknameText.text = binding.nicknameEdit.text.toString()
-        binding.nicknameEdit.visibility = View.GONE
-        binding.doneButton.visibility = View.GONE
-        binding.nicknameText.visibility = View.VISIBLE
-        val inputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-        inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
+        binding.apply {
+            myName?.nickname = binding.nicknameEdit.text.toString()
+            invalidateAll()
+            binding.nicknameEdit.visibility = View.GONE
+            binding.doneButton.visibility = View.GONE
+            binding.nicknameText.visibility = View.VISIBLE
+            val inputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+            inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
+        }
     }
 
     private fun updateNickName() {
