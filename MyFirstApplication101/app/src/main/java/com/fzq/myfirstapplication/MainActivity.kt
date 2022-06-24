@@ -10,12 +10,14 @@ import com.fzq.myfirstapplication.databinding.ActivityMainBinding // created by 
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+    private val myName: MyName = MyName("Aleks Haecky master")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         binding.doneButton.setOnClickListener { addNickname(it) }
         binding.nicknameText.setOnClickListener { updateNickName() }
+        binding.myName = this.myName
     }
 
     private fun addNickname(view: View) {

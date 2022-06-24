@@ -22,3 +22,4 @@
             binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
      ```
     * replace the findViewById to binding.idView
+  * bind string value from a ```data``` class
