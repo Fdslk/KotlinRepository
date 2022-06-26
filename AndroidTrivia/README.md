@@ -16,6 +16,9 @@
     * add navigation dependency
     * add navigation resource file click res->new Resource File->choose type is Navigation
     * create ```navigation host fragment ```
+      * should set the attribute "fragment><android:name="androidx.navigation.fragment.NavHostFragment">" 
+      * How does NavHostFragment works
+        * Each NavHostFragment has a NavController that defines valid navigation within the navigation host. This includes the NavGraph as well as navzigation state such as current location and back stack that will be saved and restored along with the NavHostFragment itself.
     * modify activity_main.xml
       * set navGraph
       * set defaultNavHost (will intercept system back button)

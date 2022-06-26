@@ -17,7 +17,7 @@ class NavHostFragment : Fragment() {
             R.layout.fragment_title,container,false)
         binding.playButton.setOnClickListener{
             view: View ->
-            view.findNavController().navigate(R.id.action_titleFragment_to_gameFragment)
+            view.findNavController().navigate(R.id.action_navHostFragment_to_gameFragment)
         }
         return binding.root
     }
