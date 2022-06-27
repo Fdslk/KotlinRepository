@@ -24,3 +24,7 @@
       * set defaultNavHost (will intercept system back button)
     * add fragment to navigation graph: adding a click event can help to jump to other page
       * click add new destination (if you cannot preview the fragment, after you add this to your navigation, you can add ```tools:layout="@layout/fragment_title"```)
+      * add action to connect two different fragment
+    * modify system back button behavior in navigation.xml
+      * set **PopUp**, this property can specify the back button destination
+      * set **PopupToInclusive**, this property is a boolean value. If it is set as **false** or not set, it will keep the popup specified destination. Otherwise, it will remove all the destination actions.
