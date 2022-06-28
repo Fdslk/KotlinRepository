@@ -7,7 +7,7 @@
     <fragment
         android:id="@+id/navHostFragment"
         android:name="com.fzq.androidtrivia.NavHostFragment"
-        android:label="NavHostFragment"
+        android:label="@string/app_name"
         tools:layout="@layout/fragment_title">
         <action
             android:id="@+id/action_navHostFragment_to_gameFragment"

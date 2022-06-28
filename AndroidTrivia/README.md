@@ -28,3 +28,6 @@
     * modify system back button behavior in navigation.xml
       * set **PopUp**, this property can specify the back button destination
       * set **PopupToInclusive**, this property is a boolean value. If it is set as **false** or not set, it will keep the popup specified destination. Otherwise, it will remove all the destination actions.
+    * add up button
+      * This button has the same behavior like the system back button
+      * Don't need to make a new one from zero
