@@ -37,3 +37,5 @@
         * create navigation_menu
         * wrap all the elements by the **<DrawerLayout>**
         * when swipe your screen from left to right, the menu navigation will be represented
+
+[more details](https://developer.android.com/codelabs/kotlin-android-training-add-navigation#11)
