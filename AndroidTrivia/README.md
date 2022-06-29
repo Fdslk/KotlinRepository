@@ -31,3 +31,9 @@
     * add up button
       * This button has the same behavior like the system back button
       * Don't need to make a new one from zero
+    * navigation drawer
+      * It likes a panel which is appeal to the side of the user screen. 
+      * how to
+        * create navigation_menu
+        * wrap all the elements by the **<DrawerLayout>**
+        * when swipe your screen from left to right, the menu navigation will be represented
