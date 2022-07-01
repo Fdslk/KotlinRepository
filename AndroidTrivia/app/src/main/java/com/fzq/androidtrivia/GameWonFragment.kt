@@ -18,8 +18,10 @@ class GameWonFragment : Fragment() {
         val binding: FragmentGameWonBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_game_won, container, false)
         binding.nextMatchButton.setOnClickListener { view: View ->
+//            view.findNavController()
+//                .navigate(R.id.action_gameWonFragment_to_gameFragment, null)
             view.findNavController()
-                .navigate(R.id.action_gameWonFragment_to_gameFragment, null)
+                .navigate(GameWonFragmentDirections.actionGameWonFragmentToGameFragment())
         }
         val args = GameWonFragmentArgs.fromBundle(requireArguments())
         Toast.makeText(context, "NumCorrect: ${args.numCorrect}, NumQuestions: ${args.numQuestions}", Toast.LENGTH_LONG).show()

@@ -48,5 +48,9 @@
         ....
       }
       ```
+    * adding arguments in related fragment
+    * using NavDirections to pass parameters
+    * receive arguments ```val args = GameWonFragmentArgs.fromBundle(requireArguments())```
+    * 
 
 [more details](https://developer.android.com/codelabs/kotlin-android-training-add-navigation#11)
