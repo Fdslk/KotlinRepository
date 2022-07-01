@@ -82,12 +82,17 @@ class GameFragment : Fragment() {
                         setQuestion()
                         binding.invalidateAll()
                     } else {
+//                        view.findNavController()
+//                            .navigate(R.id.action_gameFragment_to_gameWonFragment) //跳转
                         view.findNavController()
-                            .navigate(R.id.action_gameFragment_to_gameWonFragment)
+                            .navigate(GameFragmentDirections
+                                .actionGameFragmentToGameWonFragment(numQuestions, questionIndex)) //最后的参数传递，不会做跳转页面
                     }
                 } else {
+//                    view.findNavController()
+//                        .navigate(R.id.action_gameFragment_to_gameOverFragment)
                     view.findNavController()
-                        .navigate(R.id.action_gameFragment_to_gameOverFragment)
+                        .navigate(GameOverFragmentDirections.actionGameOverFragmentToGameFragment())
                 }
             }
         }

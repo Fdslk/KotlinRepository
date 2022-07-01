@@ -37,5 +37,16 @@
         * create navigation_menu
         * wrap all the elements by the **<DrawerLayout>**
         * when swipe your screen from left to right, the menu navigation will be represented
+* share content from internal app
+  * how to pass some arguments safer
+    * using plugin ```Safe Args```, it will create a ```NavDirection``` class which can pass arguments between fragment.
+    * tips: only add ```dependencies``` block in ```buildscript``` can work
+    ```xml
+     buildscript {
+        ....
+        dependencies {}
+        ....
+      }
+      ```
 
 [more details](https://developer.android.com/codelabs/kotlin-android-training-add-navigation#11)
