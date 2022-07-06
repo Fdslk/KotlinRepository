@@ -58,12 +58,12 @@
   * Good understanding of lifecycle can help developer respond to lifecycle state change correctly, which can reduce some strange bugs and confusing behavior for your users, and also waste lots of android system resource.
     * initialize->create->start->resume->start->create->destroy
   * Activity
-    * onCreate
-    * onStart || onRestart
-    * onResume
-    * onPause
-    * onStop
-    * onDestroy
+    * **onCreate**, only execute once when the app start first
+    * **onStart** || **onRestart**， onStart will be called once, when the app start at first. On Restart will be called, when the app is visible. 
+    * **onResume**  When the app resumed, when app is focused by user.
+    * **onPause** out of being focusing
+    * **onStop** when the app is invisible
+    * **onDestroy** GC operation
   * Fragment
     * onCreate, onAttach
     * onStart, onViewCreated, onCreateView
