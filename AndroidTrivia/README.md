@@ -54,5 +54,29 @@
     * Intent
       * implicit, generally speaking, you don't need to know who executes this actions
       * explicit
+* activity lifecycle
+  * Good understanding of lifecycle can help developer respond to lifecycle state change correctly, which can reduce some strange bugs and confusing behavior for your users, and also waste lots of android system resource.
+    * initialize->create->start->resume->start->create->destroy
+  * Activity
+    * onCreate
+    * onStart || onRestart
+    * onResume
+    * onPause
+    * onStop
+    * onDestroy
+  * Fragment
+    * onCreate, onAttach
+    * onStart, onViewCreated, onCreateView
+    * onResume
+    * onPause
+    * onStop, onDestroyView
+    * onDestroy, onDetach
+  * callback between two lifecycle states
+* Logging in android console
+  * android inline log method: ```Log.i("MainActivity", this.localClassName)``` 
+  * timber
+    * add dependency ```implementation 'com.jakewharton.timber:timber:4.7.1'```
+    * then click sync
+    * start application and observe log in Logcat
 
 [more details](https://developer.android.com/codelabs/kotlin-android-training-add-navigation#11)
