@@ -15,3 +15,10 @@
   * Data layer
     * repository, 
     * data sources, a file, network resource, or a local database
+# liveData
+* What?
+  * liveData is a observable data holder
+    * detect wrapped data changes
+    * is wrapper which can be used with any data
+    * can be associated with a liecycleOwner(activity and fragment), only updates the observer in active state (STARTED and RESUMED)
+* How to
