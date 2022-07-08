@@ -48,6 +48,7 @@
         ....
       }
       ```
+    * enable navDirections in app level gradle by adding ```apply plugin: 'androidx.navigation.safeargs'```  
     * adding arguments in related fragment
     * using NavDirections to pass parameters
     * receive arguments ```val args = GameWonFragmentArgs.fromBundle(requireArguments())```
