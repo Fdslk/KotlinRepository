@@ -38,7 +38,7 @@ class GameFragment : Fragment() {
         nextWord()
 
         binding.correctButton.setOnClickListener { onCorrect() }
-        binding.scoreText.setOnClickListener { onSkip() }
+        binding.skipButton.setOnClickListener { onSkip() }
         updateScoreText()
         updateWordText()
         // Inflate the layout for this fragment
