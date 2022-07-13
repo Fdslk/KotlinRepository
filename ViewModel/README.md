@@ -21,4 +21,5 @@
     * detect wrapped data changes
     * is wrapper which can be used with any data
     * can be associated with a liecycleOwner(activity and fragment), only updates the observer in active state (STARTED and RESUMED)
-* How to
+    * mutableLive can allow user to edit its value rather than liveData is ReadOnly
+      * liveData type value is exposed to other classes, which can restrict the using scope
