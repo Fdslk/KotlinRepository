@@ -38,11 +38,7 @@ class GameFragment : Fragment() {
         Log.i("GameFragment", "Called ViewModelProvider.get")
         viewModel = ViewModelProvider(this).get(GameViewModel::class.java)
 
-        binding.correctButton.setOnClickListener { onCorrect() }
-        binding.skipButton.setOnClickListener { onSkip() }
-
-        binding.endGameButton.setOnClickListener { onEndGame() }
-        // Inflate the layout for this fragment
+        binding.gameViewModel = viewModel
 
         viewModel.score.observe(viewLifecycleOwner, Observer {
             newScore -> binding.scoreText.text = newScore.toString()
@@ -55,11 +51,8 @@ class GameFragment : Fragment() {
         viewModel.eventGameFinish.observe(viewLifecycleOwner, Observer {
             hasFinished -> if (hasFinished) gameFinished()
         })
-        return binding.root
-    }
 
-    private fun onEndGame() {
-        gameFinished()
+        return binding.root
     }
 
     /**
@@ -72,15 +65,4 @@ class GameFragment : Fragment() {
         NavHostFragment.findNavController(this).navigate(action)
         viewModel.onGameFinishComplete()
     }
-
-    /** Methods for buttons presses **/
-
-    private fun onSkip() {
-        viewModel.onSkip()
-    }
-
-    private fun onCorrect() {
-        viewModel.onCorrect()
-    }
-
 }

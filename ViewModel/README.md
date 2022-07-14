@@ -23,3 +23,15 @@
     * can be associated with a liecycleOwner(activity and fragment), only updates the observer in active state (STARTED and RESUMED)
     * mutableLive can allow user to edit its value rather than liveData is ReadOnly
       * liveData type value is exposed to other classes, which can restrict the using scope
+# data binding with viewModel and liveData
+* how to integrate with viewModel
+  * why?
+    * it can unwrap the architecture dependency
+      * Views is defined by XML layout
+      * data of views is saved by viewModel
+      * there is a UI controller between both of them.
+    * not need to pass data to UI controller
+  * operations
+    * viewModel passes data to View XML by data binding directly
+    * add data->variable->binding viewModel with view XML
+* how to integrate with liveData 
