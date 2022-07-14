@@ -34,4 +34,6 @@
   * operations
     * viewModel passes data to View XML by data binding directly
     * add data->variable->binding viewModel with view XML
-* how to integrate with liveData 
+* how to integrate with liveData
+  * bind lifeCycle in Fragment class
+  * set value in XML by viewModel directly
