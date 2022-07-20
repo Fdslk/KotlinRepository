@@ -25,6 +25,7 @@ abstract class SleepDatabase : RoomDatabase() {
      *
      * For example, clients can call `SleepDatabase.getInstance(context)` to instantiate
      * a new SleepDatabase.
+     * common key is like static in other OO language like java and C#
      */
     companion object {
         /**

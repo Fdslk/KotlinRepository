@@ -1,4 +1,13 @@
 # How use local database in app
+* make user experience more comfortable when your app cannot access to the internet. It also can persist data in your local machine.
+* use annotation to create entity
+  * **@Entity** for creating table and defining table name
+  * **@PrimaryKey** define the primary key
+  * **@ColumnInfo** define the column name in the table
+* use **@Dao** to create query interface: ***data access object (DAO)***, which is used to communicate with local DB
+  * Dao has provided some basic interface like update, insert, Query, etc.
+* using **@Database** to create a new database or get a existing database
+* 
 
 ## traditional Factory to generate viewModel
 * add viewModel Factory to generate a params passing viewModel
@@ -46,3 +55,7 @@
 * add annotation **AndroidEntryPoint** in Fragment or Activity who needs to use DI data
 * add dependency ```implementation 'androidx.fragment:fragment-ktx:1.5.0'``` in app level for view Model provider
   * val viewModel: SleepTrackerViewModel by viewModels()
+* add custom DI module
+  * using the **@Module** annotation to mark the class as a DI class
+  * using the **@InstallIn(SingletonComponent::class)** to define provider life cycle
+  * using **@Provides** to annotate the method is related to the specific module
