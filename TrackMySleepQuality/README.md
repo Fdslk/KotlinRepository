@@ -49,7 +49,7 @@
   ```
 * add MainApplication to manifest
   * 
-  ```android:name=".app.src.main.java.MainApplication"```
+  ```android:name="MainApplication"```
 * add annotation for viewModel injection **@HiltViewModel**
 * add annotation **@inject** for being injected construct, filed, method, etc.
 * add annotation **AndroidEntryPoint** in Fragment or Activity who needs to use DI data
