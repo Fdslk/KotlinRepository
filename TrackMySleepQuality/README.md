@@ -59,3 +59,21 @@
   * using the **@Module** annotation to mark the class as a DI class
   * using the **@InstallIn(SingletonComponent::class)** to define provider life cycle
   * using **@Provides** to annotate the method is related to the specific module
+
+### coroutines in android
+* what is it?
+  * the way to handle long-running tasks elegantly and efficiently instead of callbacks
+  * like callback to process task in asynchronous and non-block way
+  * use ```suspend``` keyword for making asynchronous code in sequential way
+  * architecture
+    * Job: using for operating coroutine
+    * Dispatcher: make coroutines run in different threads
+    * Scope: define which context the coroutines runs 
+  * **why coroutines is safe and how?**
+* How to use it?
+  * add **suspend** in the front of a function signature in Dao
+  * add coroutine dependency in app level build.gradle
+    * implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
+    * implementation "androidx.room:room-ktx:$room_version"
+  * define MutableLiveData variable and init it by viewModeScope.launch starting a coroutine in current viewModel
+* Using it for long-running database
