@@ -1,4 +1,4 @@
-package com.fzq.trackmysleepquality.app.src.main.java.database
+package com.fzq.trackmysleepquality.database
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

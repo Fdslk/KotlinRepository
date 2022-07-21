@@ -1,8 +1,7 @@
-package com.fzq.trackmysleepquality.app.src.main.java
+package com.fzq.trackmysleepquality
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.fzq.trackmysleepquality.R
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

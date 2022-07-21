@@ -1,4 +1,4 @@
-package com.fzq.trackmysleepquality.app.src.main.java
+package com.fzq.trackmysleepquality
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

@@ -1,4 +1,4 @@
-package com.fzq.trackmysleepquality.app.src.main.java.sleepquality
+package com.fzq.trackmysleepquality.sleepquality
 
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel

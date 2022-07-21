@@ -1,8 +1,8 @@
-package com.fzq.trackmysleepquality.app.src.main.java.sleeptracker
+package com.fzq.trackmysleepquality.sleeptracker
 
 import android.content.Context
 import androidx.lifecycle.ViewModel
-import com.fzq.trackmysleepquality.app.src.main.java.database.SleepDatabaseDao
+import com.fzq.trackmysleepquality.database.SleepDatabaseDao
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject

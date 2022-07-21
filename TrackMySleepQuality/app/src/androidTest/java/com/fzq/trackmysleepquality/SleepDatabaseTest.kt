@@ -3,9 +3,9 @@ package com.fzq.trackmysleepquality
 import androidx.room.Room
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
-import com.fzq.trackmysleepquality.app.src.main.java.database.SleepDatabase
-import com.fzq.trackmysleepquality.app.src.main.java.database.SleepDatabaseDao
-import com.fzq.trackmysleepquality.app.src.main.java.database.SleepNight
+import com.fzq.trackmysleepquality.database.SleepDatabase
+import com.fzq.trackmysleepquality.database.SleepDatabaseDao
+import com.fzq.trackmysleepquality.database.SleepNight
 import org.junit.Assert.assertEquals
 import org.junit.After
 import org.junit.Before
@@ -45,7 +45,7 @@ class SleepDatabaseTest {
 
     @Test
     @Throws(Exception::class)
-    suspend fun insertAndGetNight() {
+    fun insertAndGetNight() {
         val night = SleepNight()
         sleepDao.insert(night)
         val tonight = sleepDao.getTonight()

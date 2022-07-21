@@ -1,9 +1,9 @@
-package com.fzq.trackmysleepquality.app.src.main.java.sleeptracker
+package com.fzq.trackmysleepquality.sleeptracker
 
 import android.app.Application
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.fzq.trackmysleepquality.app.src.main.java.database.SleepDatabaseDao
+import com.fzq.trackmysleepquality.database.SleepDatabaseDao
 
 class SleepTrackerViewModelFactory(
     private val dataSource: SleepDatabaseDao,

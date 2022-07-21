@@ -1,4 +1,4 @@
-package com.fzq.trackmysleepquality.app.src.main.java
+package com.fzq.trackmysleepquality
 
 import android.annotation.SuppressLint
 import android.content.res.Resources
