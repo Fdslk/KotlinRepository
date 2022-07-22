@@ -45,12 +45,35 @@ class SleepTrackerViewModel @Inject constructor(
     fun onStartTracking() {
         viewModelScope.launch {
             var newNight = SleepNight()
-            database.insert(newNight)
+            insert(newNight)
             tonight.value = getTonightFromDatabase()
         }
     }
 
+    fun onStopTracking() {
+        viewModelScope.launch {
+            val oldNight = tonight.value ?: return@launch
+            oldNight.endTimeMilli = System.currentTimeMillis()
+            update(oldNight)
+        }
+    }
+
+    fun onClear() {
+        viewModelScope.launch {
+            clear()
+            tonight.value = null
+        }
+    }
+
+    private suspend fun clear() {
+        database.clear()
+    }
+
     private suspend fun insert(night: SleepNight) {
         database.insert(night)
+    }
+
+    private suspend fun update(night: SleepNight) {
+        database.update(night)
     }
 }
